@@ -15,13 +15,15 @@ const ChoiceButton: React.FC<ChoiceButtonProps> = ({ choice, icon, onClick, disa
       onClick={() => onClick(choice)}
       disabled={disabled}
       className={`
-        flex flex-col items-center justify-center p-6 bg-white/10 rounded-2xl border-2 border-white/20
-        hover:bg-white/20 hover:border-white/40 active:scale-95 transition-all duration-200
-        disabled:opacity-50 disabled:cursor-not-allowed group
+        w-full aspect-square flex flex-col items-center justify-center p-4 
+        bg-white dark:bg-white/10 rounded-3xl border-2 border-slate-200 dark:border-white/20
+        hover:border-indigo-500 dark:hover:border-indigo-400 active:scale-95 transition-all duration-200
+        disabled:opacity-40 disabled:cursor-not-allowed group shadow-xl
+        text-slate-900 dark:text-white
       `}
     >
-      <span className="text-6xl mb-2 group-hover:scale-110 transition-transform">{icon}</span>
-      <span className="text-xl font-bold">{choice}</span>
+      <span className="text-5xl sm:text-6xl mb-2 group-hover:scale-110 transition-transform">{icon}</span>
+      <span className="text-lg font-extrabold tracking-tight">{choice}</span>
     </button>
   );
 };
